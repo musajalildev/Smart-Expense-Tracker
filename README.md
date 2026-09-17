@@ -20,17 +20,12 @@ organising transactions into categories, and visualising spending patterns.
 - View spending statistics
 
 ## Architecture
-React
-  │
-  ▼
-FastAPI
-  │
-  ├── Authentication
-  ├── Business Logic
-  └── REST API
-          │
-          ▼
-     PostgreSQL
+
+```mermaid
+flowchart LR
+    A[React Frontend] -->|REST API| B[FastAPI Backend]
+    B -->|SQL| C[(PostgreSQL Database)]
+```
 
 ## Testing
 
